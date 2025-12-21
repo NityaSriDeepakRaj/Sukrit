@@ -74,7 +74,8 @@ Create a `.env.local` file in the root directory:
 ```env
 MONGODB_URI=mongodb://localhost:27017/sukrit
 # or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/sukrit
+# MONGODB_URI=your_mongodb_uri_here
+
 ```
 
 ### 4. Run the development server
