@@ -104,7 +104,7 @@ Create a `.env.local` file in the root directory with the following variables:
 ```env
 MONGODB_URI=mongodb://localhost:27017/sukrit
 # or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/sukrit
+# MONGODB_URI=your mongodb uri
 
 # Optional: JWT Secret (if not hardcoded in the application)
 JWT_SECRET=your-secret-key-here
