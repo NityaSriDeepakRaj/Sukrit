@@ -1,14 +1,43 @@
-# Sukrit
+# 🌱 Sukrit
 
-A Next.js-based mental health and counseling platform connecting students, teachers, psychologists, and educational institutes.
+**Where emotion meets understanding**
+
+Sukrit is a **privacy-first digital mental wellness platform** designed for academic communities.  
+It provides **early, stigma-free, and personalized mental health support** for students, teachers, and counsellors, while enabling institutions to understand overall well-being trends through **anonymous insights** — without exposing individual identities.
+
+---
+
+## 🎯 Purpose
+
+Mental health challenges among students, teachers, and counsellors in academic institutions are increasing rapidly due to **academic pressure, workload, burnout, and lack of emotional support**.
+
+Although counselling centers exist, they are often **underutilized** because of:
+
+- Stigma and fear of judgment
+- Lack of awareness
+- Limited accessibility
+
+Additionally, **teachers and counsellors**, who are caregivers themselves, rarely receive mental wellness support. This leads to burnout and reduced effectiveness, affecting the entire academic ecosystem.
+
+**Sukrit exists to solve this gap.**
+
+Sukrit focuses on:
+
+- **Prevention over crisis**
+- **Support over surveillance**
+- **Empathy over judgment**
+
+---
 
 ## Features
 
-- 🔐 **Multi-role Authentication** - Separate login systems for institutes, students, teachers, and psychologists
-- 💬 **Confidential Chat System** - Secure messaging between students and counselors
-- 🏫 **Institute Management** - CRUD operations for managing staff, students, and institute details
-- 📊 **Wellness Tracking** - Data visualization and tracking of student wellness metrics
-- 📝 **Session Management** - Tagging and updating counseling sessions
+- **Multi-role Authentication** - Separate login systems for institutes, students, teachers, and psychologists
+- **Confidential Chat System** - Secure messaging between students and counselors
+- **Institute Management** - CRUD operations for managing staff, students, and institute details
+- **Wellness Tracking** - Data visualization and tracking of student wellness metrics
+- **Session Management** - Tagging and updating counseling sessions
+
+---
 
 ## Tech Stack
 
@@ -46,7 +75,8 @@ Create a `.env.local` file in the root directory:
 ```env
 MONGODB_URI=mongodb://localhost:27017/sukrit
 # or for MongoDB Atlas:
-# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/sukrit
+# MONGODB_URI=your_mongodb_uri_here
+
 ```
 
 ### 4. Run the development server
@@ -76,35 +106,12 @@ src/
 └── models/          # Mongoose models
 ```
 
-## User Roles
-
-- **Institute** - Manage students, staff, and view analytics
-- **Student** - Access counseling services and chat
-- **Teacher** - Limited access to student information
-- **Psychologist** - Manage counseling sessions and chat with students
-
-## API Endpoints
-
-### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - General login
-- `POST /api/auth/student-login` - Student login
-- `POST /api/auth/staff-login` - Staff login
-
-### Chat
-- `GET /api/chat/inbox` - Get user's chat inbox
-- `GET /api/chat/messages` - Get messages
-- `POST /api/chat/send-message` - Send a message
-
-### Institute Management
-- `GET /api/institute/list` - List all institutes
-- `GET /api/institute/details` - Get institute details
-- `GET /api/institute/student-list` - Get students
-- `GET /api/institute/staff-list` - Get staff
+---
 
 ## Dependencies
 
 **Key Dependencies:**
+
 - `next` ^14.2.16
 - `react` ^18.3.1
 - `mongoose` ^9.0.1
@@ -115,22 +122,37 @@ src/
 
 See `package.json` for the complete list.
 
-## Troubleshooting
+---
 
-**Database Connection Issues:**
-- Verify MongoDB is running
-- Check `MONGODB_URI` in `.env.local`
-- For Atlas: Verify IP whitelist and credentials
+## 🌍 Impact
 
-**Port Already in Use:**
-```bash
-npm run dev -- -p 3001
-```
+Sukrit creates a **safe digital ecosystem** where:
 
-## License
+- Students feel heard before reaching a breaking point
+- Teachers and counsellors receive the care they provide to others
+- Institutions gain awareness **without surveillance**
+- Mental health support becomes **accessible, ethical, and stigma-free**
 
-[Add your license here]
+---
 
-## Contributing
+## 🧭 Vision
 
-[Add contribution guidelines here]
+Sukrit aims to redefine how mental wellness is approached in academic environments —  
+by building systems that **listen first**, **protect privacy**, and **support everyone in the ecosystem**, not just those in crisis.
+
+---
+
+## 🤝 Contributing
+
+This project is being built with a strong focus on **ethics, privacy, and social impact**.  
+Contributions, feedback, and collaborations are welcome.
+
+---
+
+## 📄 License
+
+This project is intended for **social good and responsible use**.
+
+---
+
+> **Sukrit — Where emotion meets understanding.**
