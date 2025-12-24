@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sukrit
 
-## Getting Started
+A Next.js-based mental health and counseling platform connecting students, teachers, psychologists, and educational institutes.
 
-First, run the development server:
+## Features
+
+- 🔐 **Multi-role Authentication** - Separate login systems for institutes, students, teachers, and psychologists
+- 💬 **Confidential Chat System** - Secure messaging between students and counselors
+- 🏫 **Institute Management** - CRUD operations for managing staff, students, and institute details
+- 📊 **Wellness Tracking** - Data visualization and tracking of student wellness metrics
+- 📝 **Session Management** - Tagging and updating counseling sessions
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Database**: MongoDB with Mongoose
+- **Authentication**: JWT with bcryptjs
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+
+## Prerequisites
+
+- Node.js (v18+)
+- npm/yarn/pnpm
+- MongoDB (local or MongoDB Atlas)
+
+## Quick Start
+
+### 1. Clone the repository
+
+```bash
+git clone <repository-url>
+cd sukrit
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up environment variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+MONGODB_URI=mongodb://localhost:27017/sukrit
+# or for MongoDB Atlas:
+# MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/sukrit
+```
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Start development server
+- `npm run build` - Create production build
+- `npm start` - Start production server
+- `npm run lint` - Run ESLint
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/              # Next.js App Router
+│   ├── api/         # API routes (auth, chat, institute)
+│   └── [pages]/     # Frontend pages
+├── components/       # React components
+├── lib/             # Utilities (db.js)
+└── models/          # Mongoose models
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## User Roles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Institute** - Manage students, staff, and view analytics
+- **Student** - Access counseling services and chat
+- **Teacher** - Limited access to student information
+- **Psychologist** - Manage counseling sessions and chat with students
 
-## Deploy on Vercel
+## API Endpoints
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - General login
+- `POST /api/auth/student-login` - Student login
+- `POST /api/auth/staff-login` - Staff login
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Chat
+- `GET /api/chat/inbox` - Get user's chat inbox
+- `GET /api/chat/messages` - Get messages
+- `POST /api/chat/send-message` - Send a message
+
+### Institute Management
+- `GET /api/institute/list` - List all institutes
+- `GET /api/institute/details` - Get institute details
+- `GET /api/institute/student-list` - Get students
+- `GET /api/institute/staff-list` - Get staff
+
+## Dependencies
+
+**Key Dependencies:**
+- `next` ^14.2.16
+- `react` ^18.3.1
+- `mongoose` ^9.0.1
+- `jsonwebtoken` ^9.0.3
+- `bcryptjs` ^3.0.3
+- `tailwindcss` ^3.4.1
+- `recharts` ^3.5.1
+
+See `package.json` for the complete list.
+
+## Troubleshooting
+
+**Database Connection Issues:**
+- Verify MongoDB is running
+- Check `MONGODB_URI` in `.env.local`
+- For Atlas: Verify IP whitelist and credentials
+
+**Port Already in Use:**
+```bash
+npm run dev -- -p 3001
+```
+
+## License
+
+[Add your license here]
+
+## Contributing
+
+[Add contribution guidelines here]
